@@ -12,11 +12,9 @@ function trimUrl(path) {
 }
 function show(...componentsToBeShown) {
   for (const key in paths) {
-    if (componentsToBeShown.includes(key)) {
-      paths[key].style.display = "block";
-    } else {
-      paths[key].style.display = "none";
-    }
+    paths[key].style.display = componentsToBeShown.includes(key)
+      ? "block"
+      : "none";
   }
 }
 
@@ -25,11 +23,11 @@ function navigate(e) {
   switch (route) {
     case "Products":
       show("catalog");
-     // trimUrl("catalog");
+      // trimUrl("catalog");
       break;
     case "Home":
-      show("header");
-     // trimUrl("home");
+      show("header",'intro');
+      // trimUrl("home");
       break;
     case "Info":
       show("info");
@@ -37,11 +35,11 @@ function navigate(e) {
       break;
     case "Contact":
       show("contact");
-     // trimUrl("contact");
+      // trimUrl("contact");
       break;
 
     default:
-      show("header");
+      show("header","intro");
       //trimUrl("home");
       break;
   }
