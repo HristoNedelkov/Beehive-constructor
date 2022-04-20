@@ -25,24 +25,24 @@ function navigate(e) {
   switch (route) {
     case "Products":
       show("catalog");
-      trimUrl("catalog");
+     // trimUrl("catalog");
       break;
     case "Home":
       show("header");
-      trimUrl("home");
+     // trimUrl("home");
       break;
     case "Info":
       show("info");
-      trimUrl("info");
+      // trimUrl("info");
       break;
     case "Contact":
       show("contact");
-      trimUrl("contact");
+     // trimUrl("contact");
       break;
 
     default:
       show("header");
-      trimUrl("home");
+      //trimUrl("home");
       break;
   }
 }
