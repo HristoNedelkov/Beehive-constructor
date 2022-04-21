@@ -1,9 +1,11 @@
-import { uploadComment } from "./comments";
-
+// import { uploadComment } from "./comments";
 
 
 const btn = document.querySelector('#btn-comments');
 const letsStartBtn = document.querySelector("#letsStart");
+
+
+
 
 letsStartBtn.addEventListener("click", (e) => {
   window.scroll({

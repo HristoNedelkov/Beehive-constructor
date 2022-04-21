@@ -1,3 +1,5 @@
+const navigation = Array.from(document.querySelector("#navigation").children);
+
 const paths = {
   catalog: document.querySelector("#catalog-template"),
   header: document.querySelector("#header-template"),
@@ -20,35 +22,71 @@ function show(...componentsToBeShown) {
   }
 }
 
-function navigate(e) {
-  const route = e.path[0].textContent;
-  switch (route) {
-    case "Products":
-      show("catalog");
-      // trimUrl("catalog");
-      break;
-    case "Home":
-      show("header", 'intro');
-      // trimUrl("home");
-      break;
-    case "Info":
-      show("info");
-      // trimUrl("info");
-      break;
-    case "Contact":
-      show("contact");
-      // trimUrl("contact");
-      break;
-    case "About us":
-      show("about")
-      break
+navigation.forEach((element) => {
+  let a = element.children[0] 
+ 
+ a.addEventListener("click", (e) => {
 
-    default:
-      show("header", "intro");
-      //trimUrl("home");
-      break;
-  }
-}
+    const text = a.textContent;
+    switch (text) {
+      case "Products":
+        show("catalog");
+        // trimUrl("catalog");
+        break;
+      case "Home":
+        show("header", 'intro');
+        // trimUrl("home");
+        break;
+      case "Info":
+        show("info");
+        // trimUrl("info");
+        break;
+      case "Contact":
+        show("contact");
+        // trimUrl("contact");
+        break;
+      case "About us":
+        show("about")
+        break
+
+      default:
+        show("header", "intro");
+        //trimUrl("home");
+        break;
+    }
+
+    });
+})
+
+// function navigate(e) {
+//   const route = e.path[0].textContent;
+//   switch (route) {
+//     case "Products":
+//       show("catalog");
+//       // trimUrl("catalog");
+//       break;
+//     case "Home":
+//       show("header", 'intro');
+//       // trimUrl("home");
+//       break;
+//     case "Info":
+//       show("info");
+//       // trimUrl("info");
+//       break;
+//     case "Contact":
+//       show("contact");
+//       // trimUrl("contact");
+//       break;
+//     case "About us":
+//       show("about")
+//       break
+
+//     default:
+//       show("header", "intro");
+//       //trimUrl("home");
+//       break;
+//   }
+// }
 
 //   navigation.forEach((element) => {
 //     element.addEventListener("click", (e) => {
@@ -72,4 +110,4 @@ function navigate(e) {
 //         trimUrl("home");
 //       }
 //     });
-//   });
+//   })
