@@ -7,7 +7,6 @@ const paths = {
   info: document.querySelector("#info-template"),
   contact: document.querySelector("#contact-template"),
   about: document.querySelector("#about-template"),
-
 };
 
 function trimUrl(path) {
@@ -23,91 +22,36 @@ function show(...componentsToBeShown) {
 }
 
 navigation.forEach((element) => {
-  let a = element.children[0] 
- 
- a.addEventListener("click", (e) => {
+  let a = element.children[0];
 
+  a.addEventListener("click", (e) => {
     const text = a.textContent;
     switch (text) {
       case "Products":
         show("catalog");
-        // trimUrl("catalog");
+
         break;
       case "Home":
-        show("header", 'intro');
-        // trimUrl("home");
+        show("header", "intro");
+
         break;
       case "Info":
         show("info");
-        // trimUrl("info");
+
         break;
       case "Contact":
         show("contact");
-        // trimUrl("contact");
+
         break;
       case "About us":
-        show("about")
-        break
+        show("about");
+        break;
 
       default:
         show("header", "intro");
         //trimUrl("home");
         break;
     }
-
-    });
-})
-
-// function navigate(e) {
-//   const route = e.path[0].textContent;
-//   switch (route) {
-//     case "Products":
-//       show("catalog");
-//       // trimUrl("catalog");
-//       break;
-//     case "Home":
-//       show("header", 'intro');
-//       // trimUrl("home");
-//       break;
-//     case "Info":
-//       show("info");
-//       // trimUrl("info");
-//       break;
-//     case "Contact":
-//       show("contact");
-//       // trimUrl("contact");
-//       break;
-//     case "About us":
-//       show("about")
-//       break
-
-//     default:
-//       show("header", "intro");
-//       //trimUrl("home");
-//       break;
-//   }
-// }
-
-//   navigation.forEach((element) => {
-//     element.addEventListener("click", (e) => {
-//       e.preventDefault();
-//       const text = element.textContent;
-
-//       if (text == "ABOUT US") {
-//         show("aboutSectionComponents");
-//         trimUrl("about-us");
-//       } else if (text == "CAMPS") {
-//         show("campsComponents");
-//         trimUrl("camps");
-//       } else if (text == "OFFERINGS") {
-//         show("offerts");
-//         trimUrl("offerts");
-//       } else if (text == "BLOG") {
-//         show("welcomeComponent", "commentsComponent");
-//         trimUrl("blog");
-//       } else if (text == "HOME") {
-//         show("header", "welcomeComponent");
-//         trimUrl("home");
-//       }
-//     });
-//   })
+  });
+});
+ 
