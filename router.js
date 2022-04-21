@@ -4,6 +4,8 @@ const paths = {
   intro: document.querySelector("#intro-template"),
   info: document.querySelector("#info-template"),
   contact: document.querySelector("#contact-template"),
+  about: document.querySelector("#about-template"),
+
 };
 
 function trimUrl(path) {
@@ -26,7 +28,7 @@ function navigate(e) {
       // trimUrl("catalog");
       break;
     case "Home":
-      show("header",'intro');
+      show("header", 'intro');
       // trimUrl("home");
       break;
     case "Info":
@@ -37,9 +39,12 @@ function navigate(e) {
       show("contact");
       // trimUrl("contact");
       break;
+    case "About us":
+      show("about")
+      break
 
     default:
-      show("header","intro");
+      show("header", "intro");
       //trimUrl("home");
       break;
   }
