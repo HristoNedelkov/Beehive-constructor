@@ -23,16 +23,16 @@ initializeApp(firebaseConfig);
 const dbRef = getDatabase();
 
 const commentsRef = ref(dbRef, "comments");
-export function uploadComment(author, comment, email) {
+export function uploadComment({ name, email, message }) {
   const newPostRef = push(commentsRef);
   set(newPostRef, {
-    author,
-    comment,
+    name,
     email,
+    message,
   })
     .then((res) => {
       alert("Comment posted successfully");
-      console.log(author + " said " + comment);
+      console.log(name + " said " + message);
     })
     .catch((e) => {
       console.log("unseccessful, errror: " + e);
