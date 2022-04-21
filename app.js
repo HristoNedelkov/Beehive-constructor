@@ -35,7 +35,7 @@ letsStartBtn.addEventListener("click", (e) => {
 //form comments
 
 btn.addEventListener("click", (e) => {
-  e.preventDefault();
+  
   const name = document.querySelector("#name-comments").value;
   const email = document.querySelector("#email-comments").value;
   const message = document.querySelector("#message-comments").value;
