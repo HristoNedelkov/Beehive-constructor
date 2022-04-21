@@ -7,9 +7,10 @@ const paths = {
   info: document.querySelector("#info-template"),
   contact: document.querySelector("#contact-template"),
   about: document.querySelector("#about-template"),
+  gallery: document.querySelector("#gallery-template"),
 };
 
-function trimUrl(path) {
+function changeUrl(path) {
   window.history.replaceState({}, "", "/" + path);
   return;
 }
@@ -23,35 +24,30 @@ function show(...componentsToBeShown) {
 
 navigation.forEach((element) => {
   let a = element.children[0];
-
   a.addEventListener("click", (e) => {
     const text = a.textContent;
     switch (text) {
       case "Products":
         show("catalog");
-
         break;
       case "Home":
         show("header", "intro");
-
         break;
       case "Info":
         show("info");
-
         break;
       case "Contact":
         show("contact");
-
         break;
       case "About us":
         show("about");
         break;
-
+      case "Gallery":
+        show("gallery");
+        break;
       default:
         show("header", "intro");
-        //trimUrl("home");
         break;
     }
   });
 });
- 

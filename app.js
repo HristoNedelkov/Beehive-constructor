@@ -16,7 +16,7 @@ function postComment(name, email, message) {
   const div = `
   <div class="comment-card">
   <h1>${name} </h1>
-  <h2>${email}}</h2>
+  <h2>${email}</h2>
   <p>${message}</p>
 </div>
   `;
