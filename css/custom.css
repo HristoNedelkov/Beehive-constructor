@@ -28,7 +28,7 @@ header {
   min-height: auto;
   text-align: center;
   color: #fff;
-  background-image: url("../images/header.jpg");
+  background-image: url("../images/beehive-prototype/kosher-1.jpg");
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -145,15 +145,15 @@ header .header-content .header-content-inner p {
 }
 
 .item-1 {
-  background: url("../images/writing.jpg");
+  background: url("../images/beekeeper.jpg");
 }
 
 .item-2 {
-  background: url("../images/concert.jpg");
+  background: url("../images/students.jpg");
 }
 
 .item-3 {
-  background: url("../images/pencil_sharpener.jpg");
+  background: url("../images/STEM.jpg");
 }
 
 .item-1,
