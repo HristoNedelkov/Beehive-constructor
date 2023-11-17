@@ -27,22 +27,19 @@ navigation.forEach((element) => {
   a.addEventListener("click", (e) => {
     const text = a.textContent;
     switch (text) {
-      case "Products":
+      case "Прототипи":
         show("catalog");
         break;
-      case "Home":
+      case "Начало":
         show("header", "intro");
         break;
-      case "Info":
+      case "Информация":
         show("info");
         break;
-      case "Contact":
+      case "Свържи се с нас":
         show("contact");
         break;
-      case "About us":
-        show("about");
-        break;
-      case "Gallery":
+      case "Галерия":
         show("gallery");
         break;
       default:
