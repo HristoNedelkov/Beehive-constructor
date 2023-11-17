@@ -1,353 +1,495 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Vectors and Graphs</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet" />
     <script type="module" src="./comments.js" defer></script>
     <script type="module" src="js/custom.js" defer></script>
     <script type="module" src="./router.js" defer></script>
     <script type="module" src="./app.js" defer></script>
 
     <link
-        href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
-        rel='stylesheet' type='text/css'>
+      href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <!-- Navigation -->
-    <nav id="siteNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Logo and responsive toggle -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <img src="./images/bee-worker.png" alt=""
-                    style="height: 60px;padding: 0; margin: 5px;display: inline-block;">
-
-            </div>
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="navbar">
-                <ul class="nav navbar-nav navbar-right" id="navigation">
-                    <li class="active navbar-li">
-                        <a id="home-nav">Home</a>
-                    </li>
-                    <li class="navbar-li">
-                        <a id="product-nav">Products</a>
-                    </li>
-                    <li class="navbar-li">
-                        <a id="product-nav">Gallery</a>
-                    </li>
-                    <li class="navbar-li">
-                        <a id="info-nav">Info</a>
-                    </li>
-                    <li class="navbar-li">
-                        <a id="contact-nav">Contact</a>
-                    </li>
-                    <li class="navbar-li">
-                        <a id="about-nav">About us</a>
-                    </li>
-                </ul>
-
-            </div> 
-        </div> 
+    <nav
+      id="siteNav"
+      class="navbar navbar-default navbar-fixed-top"
+      role="navigation"
+    >
+      <div class="container">
+        <!-- Logo and responsive toggle -->
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#navbar"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img
+            src="./images/bee-worker.png"
+            alt=""
+            style="height: 60px; padding: 0; margin: 5px; display: inline-block"
+          />
+        </div>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav navbar-right" id="navigation">
+            <li class="active navbar-li">
+              <a id="home-nav">Home</a>
+            </li>
+            <li class="navbar-li">
+              <a id="product-nav">Products</a>
+            </li>
+            <li class="navbar-li">
+              <a id="product-nav">Gallery</a>
+            </li>
+            <li class="navbar-li">
+              <a id="info-nav">Info</a>
+            </li>
+            <li class="navbar-li">
+              <a id="contact-nav">Contact</a>
+            </li>
+            <li class="navbar-li">
+              <a id="about-nav">About us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
     <!-- Header -->
     <header id="header-template">
-        <div class="header-content">
-            <div class="header-content-inner">
-                <h1>Открийте света на пчелите с Пчелен Кошер Конструктор</h1>
-                <p>Добре дошли в удивителния свят на пчелите! С нашия Пчелен Кошер Конструктор, деца на всяка възраст могат да научат, да създават и да управляват свой собствен пчелен кошер. Станете част от приключението, което превръща забавлението в образование </p>
-                <a id="letsStart" class="btn btn-primary btn-lg">Започни обиколка</a>
-            </div>
+      <div class="header-content">
+        <div class="header-content-inner">
+          <h1>Открийте света на пчелите с Пчелен Кошер Конструктор</h1>
+          <p>
+            Добре дошли в удивителния свят на пчелите! С нашия Пчелен Кошер
+            Конструктор, деца на всяка възраст могат да научат, да създават и да
+            управляват свой собствен пчелен кошер. Станете част от
+            приключението, което превръща забавлението в образование
+          </p>
+          <a id="letsStart" class="btn btn-primary btn-lg">Започни обиколка</a>
         </div>
+      </div>
     </header>
 
     <section class="intro" id="intro-template">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <img src="images/personal/home button-background-white.svg" class="glyphicon glyphicon-apple" />
-                    <span style="width: 60px"></span>
-                    <h2 class="section-heading">Пътуване в света на пчелите през очите на науката и технологията</h2>
-                    <p class="text-light">Добре дошли в захватяващото приключение, където науката и технологията срещат природата! В нашия Пчелен Кошер Конструктор, децата ще имат уникалната възможност да се потопят в света на пчелите, използвайки принципите на STEM (наука, технологии, инженерство и математика). Този иновативен подход не само ще развива техните знания и умения в областта на технологиите, но и ще ги научи на ценните уроци от природата и значението на пчелите за нашата екосистема.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-    <section style="display: none;" id="about-template">
-
-        <div class="container">
-
-            <div class="wrapper-about">
-                <div class="hr">
-                    <hr>
-                    <h2>Нашата мисия</h2>
-                    <hr>
-                </div>
-
-                <p class="mission-txt">"Да образоваме хората на тема - Разстерна и векторна графика"</p>
-
-            </div>
-
-             
-
-            <div class="wrapper-about">
-                <h2> АВТОР НА САЙТА</h2>
-                <div class="faculties">
-                    <div class="unit">
-                        <img src="./images/personal/avatar.jpg"
-                            alt="">
-                        <p>Жанет Милева, Director</p>
-                        <p>ЗПГ "Климент Тимирязев</p>
-                        <p>email: janet@abv.bg</p>
-                        <p>phone: +123 1234 1234</p>
-
-                    </div>
-                     
-                </div>
-            </div>
-
-        </div>
-
-
-
-    </section>
-
-    <section style="display: none;" id="catalog-template">
-        <section class="content content-2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <h2 class="section-header">Инструменти Marquee (Маркери) </h2>
-                        <p class="lead text-light">
-                            Тези инструменти създават селекции, представляващи прости геометрични фигури -
-                            правоъгълници, квадрати, окръжности, елипси и хоризонтални или вертикални линии с широчина 1
-                            пиксел. Те могат да се нарекат инструменти за геометрична селекция.
-                        </p>
-                        <a href="#" class="btn btn-default btn-lg">Test It</a>
-                    </div>
-                    <div class="col-sm-6">
-                        <img class="img-responsive  center-block"
-                            src="./images/personal/cart-shopping-background-black.svg" alt="" width="50%">
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <section class="content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <img class="img-responsive img-circle center-block"
-                            src="./images/personal/clothes-hanger-background-white.svg" alt="" width="50%">
-                    </div>
-                    <div class="col-sm-6">
-                        <h2 class="section-header">Инструмент Ласо</h2>
-                        <p class="lead text-muted">Инструментите Lasso (Ласо) и Polygonal Lasso (многоъгълно ласо) ви
-                            позволяват да рисувате контури на селекции със свободна ръка или с праволинейни сегменти. С
-                            Magnetic Lasso (магнитно ласо) очертаваната селекция се придържа към най-близките контурни
-                            линии, т.е. граници между контрастни области.</p>
-                        <a href="#" class="btn btn-primary btn-lg">Детайли</a>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <section class="content content-2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <h2 class="section-header">Magic Wand Tool (Магическа пръчка) </h2>
-                        <p class="lead text-light">Най-добрият начин да се направи цветова селекция в отделните части на едно изображение, а не на цялото платно е чрез инструмента Magic Wand Tool или магическата пръчка. Тя също е добра опция за почистване на селекция, вече направена с Color Range..</p>
-                        <a href="#" class="btn btn-default btn-lg">Test It</a>
-                    </div>
-                    <div class="col-sm-6">
-                        <img class="img-responsive  center-block" src="./images/personal/cart-shopping-solid-bakground-white.svg" width="50%" alt="logos">
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <section class="content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <img class="img-responsive  center-block" src="./images/personal/shirt-background-white.svg" width="50%" alt="">
-                    </div>
-                    <div class="col-sm-6">
-                        <h2 class="section-header">Layer Mask</h2>
-                        <p class="lead text-muted">Тя се състои от чернобяла растерна графика. Можете да рисувате маската на ръка (напр. с четката) или да използвате селекции .</p>
-                        <a href="#" class="btn btn-primary btn-lg">Детайли</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="content content-2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <h2 class="section-header">Vector Mask</h2>
-                        <p class="lead text-light">Всeки слой може да притежава и векторна маска (Vector Mask), която да ограничава видимите му части. Tя се реализира чрез векторна пътека, направена посредством Pen tool-a. За разлика от традиционните пиксел-базирани маски върху слоевете, които могат да бъдат меки (soft), замъглени (blurred) или частично прозрачни (partially transparent), векторните маски винаги определят напълно непрозрачна видима площ, ограничена от твърд "ръб".</p>
-                        <a href="#" class="btn btn-default btn-lg">Test It</a>
-                    </div>
-                    <div class="col-sm-6">
-                        <img class="img-responsive  center-block" src="./images/personal/home button-background-white.svg" width="50%" alt="">
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <section class="content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <img class="img-responsive  center-block" src="./images/personal/cart-shopping-background-black.svg" width="50%" alt="">
-                    </div>
-                    <div class="col-sm-6">
-                        <h2 class="section-header">Quick Mask (Бърза маска)</h2>
-                        <p class="lead text-muted">Adobe Photoshop Quick Mask-ите се появяват като опция в панела Channels, а не като слой в документ. Те имат могат да се редактират като layer mask и осигуряват временна пиксел, базирана визуализация на селекция, която наподобява анимирана пунктирана линия, наречена "маршируващи мравки", и появява в прозореца на документа.</p>
-                        <a href="#" class="btn btn-primary btn-lg">Детайли</a>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-    </section>
-
-    <section id="gallery-template" style="display: none;">
-        <div class="container">
-            <div class="row">
-            <div class="col-lg-8 col-lg-offset-2" style="margin-top: 10%;">
-                 
-                <h2 class="section-heading">Пътуване в света на пчелите през очите на науката и технологията</h2>
-                <p >Разгледайте нашата галерия, за да видите кошерите в действие, както и радостта от обучението и работата с пчелите."</p>
-            </div>
-            </div>
-            <br><br><br>
-            <iframe width="560" height="315" src=" " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <img src=" s" alt="">
-        <br> <br>
-        <img src=" s" alt="">
-        <br> <br>
-        <img src=" s" alt="">
-        <br> <br>
-        </div>
-    </section>
-
-    <section class="content content-3" style="display: none; background-color: #cbd8d1;" id="info-template">
-        <div class="container">
-            <img src="./images/personal/info-background.jpg" alt="" style="width: 100%; ">
-
-
-            <h2 class="section-header"><span class="glyphicon glyphicon-pushpin text-primary"></span><br> Защо пчелите са важни?</h2>
-            <p class="lead text-muted"> <br>Научете повече за значението на пчелите за нашата екосистема и как Пчелен Кошер Конструктор помага на децата да разберат и да допринесат за този жизненоважен процес.
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <img
+              src="images/personal/home button-background-white.svg"
+              class="glyphicon glyphicon-apple"
+            />
+            <span style="width: 60px"></span>
+            <h2 class="section-heading">
+              Пътуване в света на пчелите през очите на науката и технологията
+            </h2>
+            <p class="text-light">
+              Добре дошли в захватяващото приключение, където науката и
+              технологията срещат природата! В нашия Пчелен Кошер Конструктор,
+              децата ще имат уникалната възможност да се потопят в света на
+              пчелите, използвайки принципите на STEM (наука, технологии,
+              инженерство и математика). Този иновативен подход не само ще
+              развива техните знания и умения в областта на технологиите, но и
+              ще ги научи на ценните уроци от природата и значението на пчелите
+              за нашата екосистема.
             </p>
-            <h2 class="section-header"><span class="glyphicon glyphicon-pushpin text-primary"></span><br> Развитие на инженерно и креативно мислене чрез STEM науки</h2>
-            <p class="lead text-muted">Развитие на инженерно и креативно мислене чрез STEM науки <br>STEM науките играят ключова роля в развитието на инженерно и креативно мислене у децата. Чрез нашия Пчелен Кошер Конструктор, ние предоставяме платформа, която стимулира любопитството и иновативния подход у младите учени. Работата по създаването и управлението на пчелен кошер подпомага разбирането на сложни процеси и насърчава децата да мислят като инженери и изобретатели, което е фундаментално за техния интелектуален и творчески растеж.
-            </p>
-
-
-            <h2 class="section-header"><br> <span
-                    class="glyphicon glyphicon-pushpin text-primary"></span><br>Пчеларството и неговото влияние върху консумацията на мед</h2>
-            <p class="lead text-muted">Повишаването на интереса на децата към пчеларството има значително въздействие върху консумацията на мед. Когато децата разберат процесите зад производството на мед и важността на пчелите за нашата екосистема, те стават по-осъзнати потребители. Това води до увеличаване на търсенето на качествен мед и продукти от пчеларството, което от своя страна подпомага устойчивостта и развитието на този важен сектор.</p>
-         
-            
-            <h2 class="section-header"><span class="glyphicon glyphicon-pushpin text-primary"></span><br> Разбиране на важността на пчелите за нашата екосистема </h2> <br>
-            <p class="lead text-muted">С нашия Пчелен Кошер Конструктор, ние се стремим да привлечем вниманието на децата към критичната роля, която пчелите играят в нашата екосистема. Пчелите не само произвеждат мед, но също така са от ключово значение за опрашването, което допринася за растежа на много растения и плодове. Чрез обучение и практически дейности, децата ще научат как да грижат за пчелите и ще разберат значението на тяхната защита. Това съзнание и ангажираност са от съществено значение за опазването и поддържането на нашата екосистема. Целта ни е да възпитаме младо поколение, което е информирано, отговорно и активно участващо в опазването на природата и нейните животни
-            </p>
-
-
+          </div>
         </div>
-        </div>
+      </div>
     </section>
 
-    <section class="container-fluid" style="display: none;" id="contact-template">
-        <br>
-        <div class="row promo">
-            <a href="#">
-                <div class="col-md-4 promo-item item-1">
-                    <h3>
-                        Пчеларство 
-                    </h3>
-                </div>
-            </a>
-            <a href="#">
-                <div class="col-md-4 promo-item item-2">
-                    <h3>
-                        Образование
-                    </h3>
-                </div>
-            </a>
+    <section style="display: none" id="about-template">
+      <div class="container">
+        <div class="wrapper-about">
+          <div class="hr">
+            <hr />
+            <h2>Нашата мисия</h2>
+            <hr />
+          </div>
 
-            <a href="#">
-                <div class="col-md-4 promo-item item-3">
-                    <h3>
-                        СТЕМ Науки
-                    </h3>
-                </div>
-            </a>
+          <p class="mission-txt">
+            "Да образоваме хората на тема - Разстерна и векторна графика"
+          </p>
         </div>
-        <br>
 
-        <div class="wrapper">
-
-            <form class="form">
-                <div class="pageTitle title">Изпрати обратна връзка </div>
-                <div class="secondaryTitle title">Моля попълнете всички полета</div>
-                <input type="text" class="name formEntry" placeholder="Name" id="name-comments" />
-                <input type="text" class="email formEntry" placeholder="Email" id="email-comments" />
-                <textarea class="message formEntry" placeholder="Message" id="message-comments"></textarea>
-                <input type="checkbox" class="termsConditions" value="Term">
-                <label style="color: grey" for="terms"> I Accept the <span style="color: #0e3721">Terms of Use</span> &
-                    <span style="color: #0e3721">Privacy Policy</span>.</label><br>
-                <button class="submit formEntry" id="btn-comments">Submit</button>
-            </form>
-
+        <div class="wrapper-about">
+          <h2>Визионер</h2>
+          <div class="faculties">
+            <div class="unit">
+              <img src="./images/personal/avatar.jpg" alt="" />
+              <p>Христо Неделков, Управител</p>
+              <p>гр. Сандански</p>
+              <p>email: hristo.nedelkow@gmail.com</p>
+              <p>phone: +359 882 662 5757</p>
+            </div>
+          </div>
         </div>
-        <div id="commentsBox">
-            <!-- HERE WE PUT COMMENTS FROM DB -->
+      </div>
+    </section>
+
+    <section style="display: none" id="catalog-template">
+      <section class="content content-2">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <h2 class="section-header">Инструменти Marquee (Маркери)</h2>
+              <p class="lead text-light">
+                Тези инструменти създават селекции, представляващи прости
+                геометрични фигури - правоъгълници, квадрати, окръжности, елипси
+                и хоризонтални или вертикални линии с широчина 1 пиксел. Те
+                могат да се нарекат инструменти за геометрична селекция.
+              </p>
+              <a href="#" class="btn btn-default btn-lg">Test It</a>
+            </div>
+            <div class="col-sm-6">
+              <img
+                class="img-responsive center-block"
+                src="./images/personal/cart-shopping-background-black.svg"
+                alt=""
+                width="50%"
+              />
+            </div>
+          </div>
         </div>
+      </section>
+      <section class="content">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <img
+                class="img-responsive img-circle center-block"
+                src="./images/personal/clothes-hanger-background-white.svg"
+                alt=""
+                width="50%"
+              />
+            </div>
+            <div class="col-sm-6">
+              <h2 class="section-header">Инструмент Ласо</h2>
+              <p class="lead text-muted">
+                Инструментите Lasso (Ласо) и Polygonal Lasso (многоъгълно ласо)
+                ви позволяват да рисувате контури на селекции със свободна ръка
+                или с праволинейни сегменти. С Magnetic Lasso (магнитно ласо)
+                очертаваната селекция се придържа към най-близките контурни
+                линии, т.е. граници между контрастни области.
+              </p>
+              <a href="#" class="btn btn-primary btn-lg">Детайли</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="content content-2">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <h2 class="section-header">Magic Wand Tool (Магическа пръчка)</h2>
+              <p class="lead text-light">
+                Най-добрият начин да се направи цветова селекция в отделните
+                части на едно изображение, а не на цялото платно е чрез
+                инструмента Magic Wand Tool или магическата пръчка. Тя също е
+                добра опция за почистване на селекция, вече направена с Color
+                Range..
+              </p>
+              <a href="#" class="btn btn-default btn-lg">Test It</a>
+            </div>
+            <div class="col-sm-6">
+              <img
+                class="img-responsive center-block"
+                src="./images/personal/cart-shopping-solid-bakground-white.svg"
+                width="50%"
+                alt="logos"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="content">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <img
+                class="img-responsive center-block"
+                src="./images/personal/shirt-background-white.svg"
+                width="50%"
+                alt=""
+              />
+            </div>
+            <div class="col-sm-6">
+              <h2 class="section-header">Layer Mask</h2>
+              <p class="lead text-muted">
+                Тя се състои от чернобяла растерна графика. Можете да рисувате
+                маската на ръка (напр. с четката) или да използвате селекции .
+              </p>
+              <a href="#" class="btn btn-primary btn-lg">Детайли</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="content content-2">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <h2 class="section-header">Vector Mask</h2>
+              <p class="lead text-light">
+                Всeки слой може да притежава и векторна маска (Vector Mask),
+                която да ограничава видимите му части. Tя се реализира чрез
+                векторна пътека, направена посредством Pen tool-a. За разлика от
+                традиционните пиксел-базирани маски върху слоевете, които могат
+                да бъдат меки (soft), замъглени (blurred) или частично прозрачни
+                (partially transparent), векторните маски винаги определят
+                напълно непрозрачна видима площ, ограничена от твърд "ръб".
+              </p>
+              <a href="#" class="btn btn-default btn-lg">Test It</a>
+            </div>
+            <div class="col-sm-6">
+              <img
+                class="img-responsive center-block"
+                src="./images/personal/home button-background-white.svg"
+                width="50%"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="content">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <img
+                class="img-responsive center-block"
+                src="./images/personal/cart-shopping-background-black.svg"
+                width="50%"
+                alt=""
+              />
+            </div>
+            <div class="col-sm-6">
+              <h2 class="section-header">Quick Mask (Бърза маска)</h2>
+              <p class="lead text-muted">
+                Adobe Photoshop Quick Mask-ите се появяват като опция в панела
+                Channels, а не като слой в документ. Те имат могат да се
+                редактират като layer mask и осигуряват временна пиксел,
+                базирана визуализация на селекция, която наподобява анимирана
+                пунктирана линия, наречена "маршируващи мравки", и появява в
+                прозореца на документа.
+              </p>
+              <a href="#" class="btn btn-primary btn-lg">Детайли</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="gallery-template" style="display: none">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2" style="margin-top: 10%">
+            <h2 class="section-heading">
+              Пътуване в света на пчелите през очите на науката и технологията
+            </h2>
+            <p>
+              Разгледайте нашата галерия, за да видите кошерите в действие,
+              както и радостта от обучението и работата с пчелите."
+            </p>
+          </div>
+        </div>
+        <br /><br /><br />
+        <iframe
+          width="560"
+          height="315"
+          src=" "
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <img src=" s" alt="" />
+        <br />
+        <br />
+        <img src=" s" alt="" />
+        <br />
+        <br />
+        <img src=" s" alt="" />
+        <br />
+        <br />
+      </div>
+    </section>
+
+    <section
+      class="content content-3"
+      style="display: none; background-color: #cbd8d1"
+      id="info-template"
+    >
+      <div class="container">
+        <img
+          src="./images/personal/info-background.jpg"
+          alt=""
+          style="width: 100%"
+        />
+
+        <h2 class="section-header">
+          <span class="glyphicon glyphicon-pushpin text-primary"></span><br />
+          Защо пчелите са важни?
+        </h2>
+        <p class="lead text-muted">
+          <br />Научете повече за значението на пчелите за нашата екосистема и
+          как Пчелен Кошер Конструктор помага на децата да разберат и да
+          допринесат за този жизненоважен процес.
+        </p>
+        <h2 class="section-header">
+          <span class="glyphicon glyphicon-pushpin text-primary"></span><br />
+          Развитие на инженерно и креативно мислене чрез STEM науки
+        </h2>
+        <p class="lead text-muted">
+          Развитие на инженерно и креативно мислене чрез STEM науки <br />STEM
+          науките играят ключова роля в развитието на инженерно и креативно
+          мислене у децата. Чрез нашия Пчелен Кошер Конструктор, ние
+          предоставяме платформа, която стимулира любопитството и иновативния
+          подход у младите учени. Работата по създаването и управлението на
+          пчелен кошер подпомага разбирането на сложни процеси и насърчава
+          децата да мислят като инженери и изобретатели, което е фундаментално
+          за техния интелектуален и творчески растеж.
+        </p>
+
+        <h2 class="section-header">
+          <br />
+          <span class="glyphicon glyphicon-pushpin text-primary"></span
+          ><br />Пчеларството и неговото влияние върху консумацията на мед
+        </h2>
+        <p class="lead text-muted">
+          Повишаването на интереса на децата към пчеларството има значително
+          въздействие върху консумацията на мед. Когато децата разберат
+          процесите зад производството на мед и важността на пчелите за нашата
+          екосистема, те стават по-осъзнати потребители. Това води до
+          увеличаване на търсенето на качествен мед и продукти от пчеларството,
+          което от своя страна подпомага устойчивостта и развитието на този
+          важен сектор.
+        </p>
+
+        <h2 class="section-header">
+          <span class="glyphicon glyphicon-pushpin text-primary"></span><br />
+          Разбиране на важността на пчелите за нашата екосистема
+        </h2>
+        <br />
+        <p class="lead text-muted">
+          С нашия Пчелен Кошер Конструктор, ние се стремим да привлечем
+          вниманието на децата към критичната роля, която пчелите играят в
+          нашата екосистема. Пчелите не само произвеждат мед, но също така са от
+          ключово значение за опрашването, което допринася за растежа на много
+          растения и плодове. Чрез обучение и практически дейности, децата ще
+          научат как да грижат за пчелите и ще разберат значението на тяхната
+          защита. Това съзнание и ангажираност са от съществено значение за
+          опазването и поддържането на нашата екосистема. Целта ни е да
+          възпитаме младо поколение, което е информирано, отговорно и активно
+          участващо в опазването на природата и нейните животни
+        </p>
+      </div>
+    </section>
+
+    <section
+      class="container-fluid"
+      style="display: none"
+      id="contact-template"
+    >
+      <br />
+      <div class="row promo">
+        <a href="#">
+          <div class="col-md-4 promo-item item-1">
+            <h3>Пчеларство</h3>
+          </div>
+        </a>
+        <a href="#">
+          <div class="col-md-4 promo-item item-2">
+            <h3>Образование</h3>
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="col-md-4 promo-item item-3">
+            <h3>СТЕМ Науки</h3>
+          </div>
+        </a>
+      </div>
+      <br />
+
+      <div class="wrapper">
+        <form class="form">
+          <div class="pageTitle title">Изпрати обратна връзка</div>
+          <div class="secondaryTitle title">Моля попълнете всички полета</div>
+          <input
+            type="text"
+            class="name formEntry"
+            placeholder="Name"
+            id="name-comments"
+          />
+          <input
+            type="text"
+            class="email formEntry"
+            placeholder="Email"
+            id="email-comments"
+          />
+          <textarea
+            class="message formEntry"
+            placeholder="Message"
+            id="message-comments"
+          ></textarea>
+          <input type="checkbox" class="termsConditions" value="Term" />
+          <label style="color: grey" for="terms">
+            I Accept the <span style="color: #0e3721">Terms of Use</span> &
+            <span style="color: #0e3721">Privacy Policy</span>.</label
+          ><br />
+          <button class="submit formEntry" id="btn-comments">Submit</button>
+        </form>
+      </div>
+      <div id="commentsBox">
+        <!-- HERE WE PUT COMMENTS FROM DB -->
+      </div>
     </section>
 
     <footer class="page-footer">
-
-        <!-- Contact Us -->
-        <div class="contact">
-            <div class="container">
-                <h2 class="section-heading">Свържете се с нас</h2>
-                <p><span class="glyphicon glyphicon-earphone"></span><br> +359 882 62 5757</p>
-                <p><span class="glyphicon glyphicon-envelope"></span><br> hristo.nedelkow@gmail.com</p>
-            </div>
+      <!-- Contact Us -->
+      <div class="contact">
+        <div class="container">
+          <h2 class="section-heading">Свържете се с нас</h2>
+          <p>
+            <span class="glyphicon glyphicon-earphone"></span><br />
+            +359 882 62 5757
+          </p>
+          <p>
+            <span class="glyphicon glyphicon-envelope"></span><br />
+            hristo.nedelkow@gmail.com
+          </p>
         </div>
+      </div>
 
-        <!-- Copyright etc -->
-        <div class="small-print">
-            <div class="container">
-                <p>Copyright &copy; all rights reserved</p>
-            </div>
+      <!-- Copyright etc -->
+      <div class="small-print">
+        <div class="container">
+          <p>Copyright &copy; all rights reserved</p>
         </div>
-
+      </div>
     </footer>
 
     <!-- jQuery -->
@@ -360,7 +502,5 @@
     <script src="js/jquery.easing.min.js"></script>
 
     <!-- Custom Javascript -->
-
-</body>
-
+  </body>
 </html>
