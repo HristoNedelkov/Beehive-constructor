@@ -6,7 +6,6 @@ const paths = {
   intro: document.querySelector("#intro-template"),
   info: document.querySelector("#info-template"),
   contact: document.querySelector("#contact-template"),
-  about: document.querySelector("#about-template"),
   gallery: document.querySelector("#gallery-template"),
 };
 
@@ -25,8 +24,9 @@ function show(...componentsToBeShown) {
 navigation.forEach((element) => {
   let a = element.children[0];
   a.addEventListener("click", (e) => {
+    e.preventDefault()
     const text = a.textContent;
-    switch (text) {
+     switch (text) {
       case "Прототипи":
         show("catalog");
         break;
