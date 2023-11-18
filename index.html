@@ -19,8 +19,8 @@
     <script type="module" src="./app.js" defer></script>
     <script type="text/javascript">
       function passwordProtect() {
-          var password = prompt('Please enter the password to view this page', '');
-          if (password != 'YOUR_PASSWORD') {
+          var password = prompt('Въведете ключ за достъп.', '******');
+          if (password != 'queenbee123') {
               window.location = 'ACCESS_DENIED_PAGE_URL';
           }
       }
