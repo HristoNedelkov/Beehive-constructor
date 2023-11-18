@@ -17,7 +17,14 @@
     <script type="module" src="js/custom.js" defer></script>
     <script type="module" src="./router.js" defer></script>
     <script type="module" src="./app.js" defer></script>
-
+    <script type="text/javascript">
+      function passwordProtect() {
+          var password = prompt('Please enter the password to view this page', '');
+          if (password != 'YOUR_PASSWORD') {
+              window.location = 'ACCESS_DENIED_PAGE_URL';
+          }
+      }
+  </script>
     <link
       href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
       rel="stylesheet"
@@ -25,7 +32,7 @@
     />
   </head>
 
-  <body>
+  <body onload="passwordProtect();">
     <!-- Navigation -->
     <nav
       id="siteNav"
