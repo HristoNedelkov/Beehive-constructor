@@ -10,8 +10,14 @@ fs.readdir(directoryPath, (err, files) => {
         return console.log('Unable to scan directory: ' + err);
     } 
 
-    // Listing all files using forEach
+    // Create an array to hold the file names
+    const fileList = [];
+
+    // Add each file to the array
     files.forEach(file => {
-        console.log(file);
+        fileList.push(file);
     });
+
+    // Console log the array
+    console.log(fileList);
 });
