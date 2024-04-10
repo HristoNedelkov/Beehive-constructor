@@ -13,6 +13,7 @@
 
     <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
     <link href="css/custom.css" rel="stylesheet" />
+
     <script type="module" src="./comments.js" defer></script>
     <script type="module" src="js/custom.js" defer></script>
     <script type="module" src="./router.js" defer></script>
@@ -25,7 +26,7 @@
     />
   </head>
 
-  <body onload="passwordProtect();">
+  <body>
     <!-- Navigation -->
     <nav
       id="siteNav"
@@ -112,12 +113,12 @@
             </p>
           </div>
           <iframe
-          frameborder="1"
-          allowtransparency="true"
-          allowfullscreen="true"
-          style="width: 100%; height: 600px; border: none"
-          src="./images/Beehive-constructor-manual_compressed.pdf"
-        ></iframe>
+            frameborder="1"
+            allowtransparency="true"
+            allowfullscreen="true"
+            style="width: 100%; height: 600px; border: none"
+            src="./images/Beehive-constructor-manual_compressed.pdf"
+          ></iframe>
         </div>
       </div>
     </section>
@@ -305,7 +306,6 @@
     </section>
 
     <section style="display: none" id="gallery-template">
-     
       <div id="photoGrid" class="container">
         <!-- JavaScript will add rows and images here -->
       </div>
@@ -413,17 +413,20 @@
             class="name formEntry"
             placeholder="Name"
             id="name-comments"
+            name="name"
           />
           <input
             type="text"
             class="email formEntry"
             placeholder="Email"
             id="email-comments"
+            name="email"
           />
           <textarea
             class="message formEntry"
             placeholder="Message"
             id="message-comments"
+            name="message"
           ></textarea>
           <input type="checkbox" class="termsConditions" value="Term" />
           <label style="color: grey" for="terms">
@@ -432,9 +435,6 @@
           ><br />
           <button class="submit formEntry" id="btn-comments">Submit</button>
         </form>
-      </div>
-      <div id="commentsBox">
-        <!-- HERE WE PUT COMMENTS FROM DB -->
       </div>
     </section>
 
@@ -457,7 +457,6 @@
       <!-- Copyright etc -->
       <div class="small-print">
         <div class="container">
-          <p>Проектът е част от „Академия за ВИЗИОНЕРИ“ на Столична община</p>
           <p>Copyright &copy; all rights reserved</p>
         </div>
       </div>

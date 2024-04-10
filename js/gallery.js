@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let row = null;
   imageList.forEach((image, index) => {
-    console.log(image, index);
+     
     const colClass = index % 5 === 0 ? "col-md-6" : "col-md-4";
     const col = document.createElement("div");
 

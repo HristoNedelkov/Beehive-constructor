@@ -19,5 +19,5 @@ fs.readdir(directoryPath, (err, files) => {
     });
 
     // Console log the array
-    console.log(fileList);
+ 
 });
