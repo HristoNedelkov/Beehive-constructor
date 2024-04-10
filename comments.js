@@ -1,47 +1,39 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
 import emailjs from "https://cdn.skypack.dev/@emailjs/browser";
-import {
-  getDatabase,
-  set,
-  ref,
-  child,
-  push,
-  get,
-} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
-const firebaseConfig = {
-  apiKey: "",// YOU NEED TO ADD THIS TO USE FIREBASE!!!
-  authDomain: "jana-vector-and-graph.firebaseapp.com",
-  databaseURL: "https://jana-vector-and-graph-default-rtdb.firebaseio.com",
-  projectId: "jana-vector-and-graph",
-  storageBucket: "jana-vector-and-graph.appspot.com",
-  messagingSenderId: "6395513197",
-  appId: "1:6395513197:web:70450612dbe7ed1eabb264",
-};
 
- 
-
-const dbRef = getDatabase();
-
-//const commentsRef = ref(dbRef, "comments");
-export function uploadComment({ name, email, message }) {
-  // const newPostRef = push(commentsRef);
-
+document.addEventListener("DOMContentLoaded", function () {
   const serviceID = "service_4dhm85f";
   const templateID = "template_d3niw1s";
   emailjs.init("QkQM3bAxeRcLBV9Af");
+  
+  const form = document.getElementById("feedback-form");
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the default form submission
+    
+    // Change button text and disable it
+    const btn = document.getElementById("btn-comments");
+    btn.textContent = "Sending...";
+    btn.disabled = true;
 
-  const form = document.querySelector("form");
+    // Add a simple CSS-based loading animation
+    btn.classList.add("is-loading");
 
-  emailjs.sendForm(serviceID, templateID, form).then(
-    () => {
-      alert("Благодаря, че се свързахте с нас! Ще се свържем с вас в най-кратък срок! :)");
-    },
-    (err) => {
-      alert(JSON.stringify(err));
-    }
-  );
-}
-
-export function getAllComments() {
-  return get(ref(dbRef, "comments"));
-}
+    // Send the email via EmailJS
+    emailjs.sendForm(serviceID, templateID, this).then(
+      () => {
+        alert(
+          "Благодаря, че се свързахте с нас! Ще се свържем с вас в най-кратък срок! :)"
+        );
+        btn.textContent = "Submit"; // Change back the button text
+        btn.disabled = false; // Enable the button
+        btn.classList.remove("is-loading"); // Remove loading animation
+      },
+      (err) => {
+        alert("Failed to send the feedback. Please try again.");
+        btn.textContent = "Submit"; // Change back the button text
+        btn.disabled = false; // Enable the button
+        btn.classList.remove("is-loading"); // Remove loading animation
+        console.error("EmailJS error:", err);
+      }
+    );
+  });
+});
